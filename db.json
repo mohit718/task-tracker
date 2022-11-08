@@ -15,7 +15,7 @@
     {
       "name": "Recount? ",
       "daytime": "",
-      "reminder": true,
+      "reminder": false,
       "id": 3
     },
     {
@@ -26,9 +26,33 @@
     },
     {
       "name": "Still sun from codepen ",
-      "daytime": "https://codepen.io/irshadav/pen/GRwKRZ",
+      "daytime": "Friday",
       "reminder": false,
       "id": 5
+    },
+    {
+      "name": "Task1",
+      "daytime": "Monday",
+      "reminder": false,
+      "id": 6
+    },
+    {
+      "name": "Task2",
+      "daytime": "",
+      "reminder": false,
+      "id": 7
+    },
+    {
+      "name": "Task3",
+      "daytime": "",
+      "reminder": true,
+      "id": 8
+    },
+    {
+      "name": "Final Task",
+      "daytime": "Everyday",
+      "reminder": true,
+      "id": 9
     }
   ]
 }

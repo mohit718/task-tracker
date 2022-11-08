@@ -14,10 +14,12 @@ export default function Task({ task, deleteTask, toggleReminder }) {
           onClick={deleteTask}
         />
       </div>
+      {task.daytime!=='' &&
       <div className="d-flex">
         <SiGooglecalendar className="icon txt-primary" />
         <p className="txt-12">{task.daytime}</p>
       </div>
+      }
     </li>
   );
 }

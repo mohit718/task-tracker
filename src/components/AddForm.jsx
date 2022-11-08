@@ -20,7 +20,7 @@ function AddForm({showForm, onSave}) {
         setReminder(false);
     }
     return (<>
-    {showForm && <form className='' onSubmit={onSubmit}>
+    {showForm && <form className='container' onSubmit={onSubmit}>
         <div className="form-group">
             <label htmlFor="taskname" className='form-label'>Task</label>
             <input type="text" id="taskname" className='form-control' placeholder='Add Task' value={taskname} onChange={e=>setTaskname(e.target.value)} required/>
@@ -35,6 +35,7 @@ function AddForm({showForm, onSave}) {
             </label>
         </div>
         <button type="submit" className='btn btn-block btn-dark'>Save Task</button>
+        <div className="hr" />  
     </form>}
     </>
   )

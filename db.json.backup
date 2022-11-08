@@ -1,0 +1,34 @@
+{
+    "tasks": [
+      {
+        "name": "Get 500 from 12399",
+        "daytime": "From 8:00 to 18:00 15.07.22",
+        "reminder": false,
+        "id": 1
+      },
+      {
+        "name": "Change current tarif (probably in bug)",
+        "daytime": "",
+        "reminder": false,
+        "id": 2
+      },
+      {
+        "name": "Recount? ",
+        "daytime": "",
+        "reminder": false,
+        "id": 3
+      },
+      {
+        "name": "watch the full course about react 2021",
+        "daytime": "",
+        "reminder": false,
+        "id": 4
+      },
+      {
+        "name": "Still sun from codepen ",
+        "daytime": "https://codepen.io/irshadav/pen/GRwKRZ",
+        "reminder": false,
+        "id": 5
+      }
+    ]
+  }

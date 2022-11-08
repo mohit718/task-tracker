@@ -129,8 +129,29 @@ input[type='checkbox'] {
   margin-right: 5rem;
 }
 
+.mx-1{
+  margin-right: 8px;
+  margin-left: 8px;
+}
+
 .txt-center{
   text-align: center;
+}
+
+.txt-light{
+  color: var(--light)
+}
+
+.txt-secondary{
+  color: var(--secondary)
+}
+
+.txt-success{
+  color: var(--success)
+}
+
+.txt-primary{
+  color: var(--primary)
 }
 
 .txt-12{
@@ -140,10 +161,12 @@ input[type='checkbox'] {
 .task{
   display: flex;
   flex-direction: column;
+  margin-bottom: 0.5rem;
   padding: 5px 10px;
   background-color: #d1e7ff;
   border-radius: 5px;
   color: var(--dark);
+  user-select: none;
 }
 
 .task-header{
@@ -152,7 +175,13 @@ input[type='checkbox'] {
 
 }
 .task.reminder {
-  border-left: 5px solid green;
+  box-shadow: -3px 0px 0px 0px var(--success);
+  /* border-left: 5px solid green; */
+}
+
+.icon{
+  font-size: 14px;
+  margin: 0px 2px;
 }
 
 .d-flex{

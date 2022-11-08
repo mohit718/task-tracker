@@ -10,7 +10,7 @@ function AddForm({showForm, onSave}) {
         let newTask = {
             name: taskname,
             daytime: daytime,
-            isReminder: reminder
+            reminder: reminder
         }
 
         onSave(newTask);
@@ -31,7 +31,7 @@ function AddForm({showForm, onSave}) {
         </div>
         <div className="form-group">
             <label htmlFor="reminder" className='form-label'>Set Reminder
-                <input type="checkbox" id="reminder" className='form-control' value={reminder} onChange={e=>setReminder(e.target.value)}/>
+                <input type="checkbox" id="reminder" className='form-control' checked={reminder} onChange={e=>setReminder(e.target.checked)}/>
             </label>
         </div>
         <button type="submit" className='btn btn-block btn-dark'>Save Task</button>

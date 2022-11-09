@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import AddForm from "./components/AddForm";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
-import TaskList from "./components/TaskList";
 import About from "./screen/About";
 import Home from "./screen/Home";
+
+const ENDPOINT = process.env.REACT_APP_ENDPOINT || "http://localhost:5000";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -13,42 +13,43 @@ function App() {
 
   useEffect(() => {
     fetchTasks().then(data => setTasks(data));
-  }, [tasks]);
+  }, []);
 
   const fetchTasks = async () => {
-    return await fetch("http://localhost:3000/tasks").then(res => res.json());
+    return await fetch(`${ENDPOINT}/tasks`).then(res => res.json());
   };
 
   const fetchTask = async id => {
-    return await fetch(`http://localhost:3000/tasks/${id}`).then(res =>
+    return await fetch(`${ENDPOINT}/tasks/${id}`).then(res =>
       res.json()
     );
   };
 
-  async function onSave(task) {
-    // task.id = Math.floor(Math.random() * 10000) + 1;
-    // setTasks([...tasks, task]);
-    console.log(task);
-    await fetch(`http://localhost:3000/tasks`, {
+  async function saveTask(task) {
+    await fetch(`${ENDPOINT}/tasks`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(task),
-    });
+    }).then(
+      res => res.ok && res.json().then(task => setTasks([...tasks, task]))
+    );
   }
 
   async function deleteTask(id) {
-    // setTasks(tasks.filter(task => task.id !== id));
-    await fetch(`http://localhost:3000/tasks/${id}`, { method: "DELETE" });
+    await fetch(`${ENDPOINT}/tasks/${id}`, { method: "DELETE" }).then(
+      res => res.ok && setTasks(tasks.filter(task => task.id !== id))
+    );
   }
 
   async function toggleReminder(id) {
     let task = await fetchTask(id);
     task = { ...task, reminder: !task.reminder };
-    await fetch(`http://localhost:3000/tasks/${id}`, {
+    fetch(`${ENDPOINT}/tasks/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(task),
-    });
+    })
+      .then(res => res.ok && res.json().then(data=>setTasks(tasks.map(task => (task.id === data.id ? data : task)))))
   }
 
   return (
@@ -59,13 +60,15 @@ function App() {
           <Route
             path="/"
             exact
-            element = {<Home
+            element={
+              <Home
                 showForm={showForm}
-                onSave={onSave}
                 tasks={tasks}
+                saveTask={saveTask}
                 deleteTask={deleteTask}
                 toggleReminder={toggleReminder}
-            />}
+              />
+            }
           />
           <Route path="/about" element={<About />} />
         </Routes>

@@ -1,0 +1,27 @@
+.txt-center {
+  text-align: center;
+}
+
+.txt-light {
+  color: var(--light);
+}
+
+.txt-primary {
+    color: var(--primary);
+}
+
+.txt-secondary {
+  color: var(--secondary);
+}
+
+.txt-success {
+  color: var(--success);
+}
+
+.txt-danger {
+    color: var(--danger);
+}
+
+.txt-12 {
+  font-size: 12px;
+}

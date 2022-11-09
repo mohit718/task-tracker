@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function AddForm({showForm, onSave}) {
+function AddForm({showForm, saveTask}) {
     const [taskname, setTaskname] = useState('');
     const [daytime, setDaytime] = useState('');
     const [reminder, setReminder] = useState(false);
@@ -13,7 +13,7 @@ function AddForm({showForm, onSave}) {
             reminder: reminder
         }
 
-        onSave(newTask);
+        saveTask(newTask);
 
         setTaskname('');
         setDaytime('');

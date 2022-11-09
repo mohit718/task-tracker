@@ -1,0 +1,22 @@
+.mr-5 {
+  margin-right: 5rem;
+}
+
+.mx-1 {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.my-1 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hr {
+  margin: 5px 0px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary);
+  height: 3px;
+  border-radius: 2px;
+}

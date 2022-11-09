@@ -3,56 +3,38 @@
     {
       "name": "Get 500 from 12399",
       "daytime": "From 8:00 to 18:00 15.07.22",
-      "reminder": false,
+      "reminder": true,
       "id": 1
-    },
-    {
-      "name": "Change current tarif (probably in bug)",
-      "daytime": "",
-      "reminder": false,
-      "id": 2
-    },
-    {
-      "name": "Recount? ",
-      "daytime": "",
-      "reminder": false,
-      "id": 3
     },
     {
       "name": "watch the full course about react 2021",
       "daytime": "",
-      "reminder": false,
+      "reminder": true,
       "id": 4
     },
     {
       "name": "Still sun from codepen ",
-      "daytime": "Friday",
+      "daytime": "https://codepen.io/irshadav/pen/GRwKRZ",
       "reminder": false,
       "id": 5
     },
     {
-      "name": "Task1",
-      "daytime": "Monday",
+      "name": "Mohit Taks",
+      "daytime": "fejdfie",
       "reminder": false,
       "id": 6
     },
     {
-      "name": "Task2",
-      "daytime": "",
+      "name": "dekmied",
+      "daytime": "iednik",
       "reminder": false,
       "id": 7
     },
     {
-      "name": "Task3",
-      "daytime": "",
+      "name": "New Task",
+      "daytime": "Frifday",
       "reminder": true,
       "id": 8
-    },
-    {
-      "name": "Final Task",
-      "daytime": "Everyday",
-      "reminder": true,
-      "id": 9
     }
   ]
 }

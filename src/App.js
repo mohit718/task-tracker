@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import About from "./screen/About";
 import Home from "./screen/Home";
 
-const ENDPOINT = process.env.REACT_APP_ENDPOINT || "http://localhost:5000";
+const ENDPOINT = process.env.REACT_APP_ENDPOINT;
 
 function App() {
   const [showForm, setShowForm] = useState(false);
